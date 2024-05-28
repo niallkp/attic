@@ -96,7 +96,7 @@
   </ul>
   <p>However note that the most recent meeting minutes are not published until the following meeting at the earliest</p>
   <p>Check that Secretary removed the PMC from <a href="https://svn.apache.org/repos/private/committers/board/committee-info.txt">https://svn.apache.org/repos/private/committers/board/committee-info.txt</a></p>
-  <p>This automatically removes VP entry on <a href="https://www.apache.org/foundation/">https://www.apache.org/foundation/</a> and project from <a href="https://www.apache.org/#projects-list">https://www.apache.org/#projects-list</a> navigation</p>
+  <p>This automatically removes VP entry on <a href="https://www.apache.org/foundation/leadership">https://www.apache.org/foundation/leadership</a> and project from <a href="https://www.apache.org/#projects-list">https://www.apache.org/#projects-list</a> navigation</p>
 </section>
 
 <section id="informing">
