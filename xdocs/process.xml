@@ -48,23 +48,10 @@
         <li><a href="#informing">#</a> Inform users of the move to the Attic</li>
         <li><a href="#atticsite">#</a> Create project page on Attic site: https://attic.apache.org/projects/$project.html</li>
         <li><a href="#doap">#</a>Update the project DOAP files (if any) or copy to <a href="https://svn.apache.org/repos/asf/comdev/projects.apache.org/trunk/data/projects-override/">projects-override</a></li>
+        <li><a href="#infra">#</a>Get infra lock down project's resources</li>
         <li><a href="#announce">#</a> Announce on <a href="https://lists.apache.org/list?announce@apache.org:lte=1M:%22is%20now%20retired%22">announce at apache.org</a></li>
       </ol>
       The Attic PMC will then execute the steps: getting help from terminating project is welcome, particularly on informing users step or any other useful action at project's level like modifying DOAP.
-    </li>
-    <li>Open an <a href="https://issues.apache.org/jira/browse/INFRA">Infrastructure JIRA</a> issue identifying the resources that need turning off/making read only.<br/>
-      The Attic PMC will create a base issue description using <a href="https://svn.apache.org/viewvc/attic/site/infrajiratext.py?view=markup"><code>infrajiratext.py</code></a>.<br/>
-      Typically, it contains steps like following, that need to be tweaked based on assets of the retired project:
-      <ul>
-        <li>Make source control Git|Svn read-only</li>
-        <li>Remove files from <a href="https://dist.apache.org/repos/dist/">dist.apache.org/repos/dist/[release|dev]</a></li>
-        <li>Closing down of dev@, commits@ and private@ etc. <a href="https://lists.apache.org/">mailing lists</a></li>
-        <li>Close down the user mailing list (unless still active - in which case propose a moderator to Infra)</li>
-        <li>Make JIRA|Bugzilla read-only</li>
-        <li>Make the wiki (if any) read-only</li>
-        <li>Delete LDAP group(s)</li>
-        <li>Turn off automated builds</li>
-      </ul>
     </li>
   </ol>
 
@@ -174,8 +161,28 @@ new category:  &lt;category rdf:resource="http://projects.apache.org/category/re
     </ul>
 </section-->
 
+<section id="infra">
+  <title>How to: 5. Get infra lock down project's resources</title>
+  <p>Open an <a href="https://issues.apache.org/jira/browse/INFRA">Infrastructure JIRA</a> issue identifying the resources that need turning off/making read only.</p>
+
+  <p>The content of the issue can be generated using <a href="https://svn.apache.org/viewvc/attic/site/infrajiratext.py?view=markup"><code>infrajiratext.py</code></a>.</p>
+
+  <p>Typically, it contains steps like following, that need to be tweaked based on assets of the retired project:
+    <ul>
+      <li>Make source control Git|Svn read-only</li>
+      <li>Remove files from <a href="https://dist.apache.org/repos/dist/">dist.apache.org/repos/dist/[release|dev]</a></li>
+      <li>Closing down of dev@, commits@ and private@ etc. <a href="https://lists.apache.org/">mailing lists</a></li>
+      <li>Close down the user mailing list (unless still active - in which case propose a moderator to Infra)</li>
+      <li>Make JIRA|Bugzilla read-only</li>
+      <li>Make the wiki (if any) read-only</li>
+      <li>Delete LDAP group(s)</li>
+      <li>Turn off automated builds</li>
+    </ul>
+  </p>
+</section>
+
 <section id="announce">
-  <title>How to: 5. Announce on announce@apache.org</title>
+  <title>How to: 6. Announce on announce@apache.org</title>
 
   <p>Announce that the project <a href="https://lists.apache.org/list?announce@apache.org:lte=1M:%22is%20now%20retired%22">is now retired</a>. Consider the following template.</p>
   <p>Sometimes, the user mailing list will not be shut down.
