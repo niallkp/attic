@@ -499,6 +499,7 @@ href="$title.getAttributeValue("href")">$menu.getChildText("title")</a></div>
 	<link rel="stylesheet" href="/style/compressed.css" type="text/css" media="screen, projection"/>
 	<link rel="stylesheet" href="/style/style.css" type="text/css" media="screen, projection"/>
 	<link rel="stylesheet" href="/style/attic.css" type="text/css" media="screen, projection"/>
+  <script src="https://www.apachecon.com/event-images/snippet.js"></script>
 #if ($is_dynpage == 1)
 	<!--[[]if IE]><link rel="stylesheet" href="/style/ie.css" type="text/css" media="screen, projection"/><![[]endif]-->
 #else

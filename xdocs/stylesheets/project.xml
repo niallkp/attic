@@ -37,6 +37,7 @@ limitations under the License.
       <li><a href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
       <li><a href="https://incubator.apache.org/">Incubator</a></li>
       <li><a href="https://apachecon.com/">ApacheCon</a></li>
+      <li><a class="acevent" data-format="square">Events</a></li>
     </projects>
 
     <menu><title>Projects in the Attic</title>
