@@ -42,7 +42,7 @@
 
   <resource_table project="cocoon">
     <mail name="cvs,docs,users,users-fr"/>
-    <jira key="COCOON"/>
+    <jira key="COCOON,COCOON3"/>
     <cwiki/>
     <svn/>
   </resource_table>
