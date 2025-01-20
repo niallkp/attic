@@ -48,10 +48,11 @@
     <!-- use attribute key="" to override default JIRA -->
     <!-- N.B. some projects may use GitHub issues instead of JIRA -->
     <jira key="${jira_names}"/>
-    <!--
-    <cwiki/>
-    -->
-    <!--svn/>  OR  <git/-->
+    <!-- <cwiki [key="a,b"]/> if present -->
+    ${cwiki}
+    <!--svn/>  AND/OR  <git/> -->
+    ${svn}
+    ${git}
     <!-- use the tag
     <no_downloads/>
     to suppress the Downloads links -->
