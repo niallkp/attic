@@ -45,6 +45,7 @@
   <mail name="user"/>
   <mail name="commits"/>
   <jira/>
+  <cwiki key="ODE2,ODExSITE"/>
   <git/>
   </resource_table>
 

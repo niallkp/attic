@@ -41,6 +41,7 @@
   <resource_table project="beehive">
   <mail name="commits,user"/>
   <jira/>
+  <cwiki/>
   <svn/>
   </resource_table>
 

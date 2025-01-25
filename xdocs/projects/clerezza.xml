@@ -48,10 +48,8 @@
     <!-- use attribute key="" to override default JIRA -->
     <!-- N.B. some projects may use GitHub issues instead of JIRA -->
     <jira key="CLEREZZA"/>
-    <!--
     <cwiki/>
-    -->
-    <!--svn/>  OR  <git/-->
+    <git/>
     <!-- use the tag
     <no_downloads/>
     to suppress the Downloads links -->

@@ -41,6 +41,8 @@
     <mail name="commits,tech"/>
     <!-- use attribute key="" to override default JIRA -->
     <jira/>
+    <cwiki/>
+    <svn/>
     <no_downloads/>
   </resource_table>
 

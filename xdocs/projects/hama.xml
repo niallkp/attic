@@ -47,6 +47,8 @@
   <mail name="user"/>
    <!-- use attribute key="" to override default JIRA -->
   <jira/>
+  <cwiki/>
+  <git/>
   </resource_table>
 
   <p>Archived versions of Hama may be downloaded from the 

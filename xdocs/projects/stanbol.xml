@@ -44,7 +44,8 @@
   <!-- by default only dev is generated -->
   <mail name="commits"/>
    <!-- use attribute key="" to override default JIRA -->
-  <jira/>
+    <jira/>
+    <git/>
   </resource_table>
 
   <p>Archived versions of Stanbol may be downloaded from the 

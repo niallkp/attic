@@ -37,6 +37,7 @@
       <mail name="announcements"/>
       <mail name="general"/>
       <mail name="general-cvs"/>
+      <cwiki key="XMLBEANS,XMLGRAPHICS,XMLGRAPHICSBATIK,XMLGRAPHICSFOP"/>
       <svn/>
     </resource_table>
 

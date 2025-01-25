@@ -38,6 +38,7 @@
   <resource_table project="excalibur">
   <mail name="scm,user"/>
   <jira key="EXLBR,FORTRESS"/>
+  <cwiki/>
   <svn/>
   </resource_table>
 

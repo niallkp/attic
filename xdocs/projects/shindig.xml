@@ -34,7 +34,7 @@
     <mail name="users"/>
     <mail name="commits"/>
     <jira/>
-    <cwiki/>
+    <cwiki key="SHINDIG,SHINDIGxSITE"/>
     <svn/>
   </resource_table>
 

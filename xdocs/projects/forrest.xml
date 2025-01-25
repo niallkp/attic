@@ -47,6 +47,7 @@
   <mail name="svn"/>
   <mail name="user"/>
   <jira key="FOR"/>
+  <svn/>
   </resource_table>
 
   <p>Archived versions of Forrest may be downloaded from the 

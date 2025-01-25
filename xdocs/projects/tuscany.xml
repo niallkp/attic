@@ -35,7 +35,7 @@
     <mail name="commits"/>
     <mail name="notification"/>
     <jira/>
-    <cwiki/>
+    <cwiki key="TUSCANY,TUSCANYWIKI,TUSCANYxDOCx1x,TUSCANYxDOCx2x"/>
     <svn/>
     <git/>
   </resource_table>

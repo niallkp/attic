@@ -47,6 +47,8 @@
   <mail name="issues"/>
   <mail name="users"/>
   <jira/>
+  <cwiki/>
+  <svn/>
   </resource_table>
 
   <p>Archived versions of the Tiles may be downloaded from the 

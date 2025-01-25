@@ -48,6 +48,7 @@
     <mail name="users"/>
     <!-- use attribute key="" to override default JIRA -->
     <jira/>
+    <cwiki/>
     <!-- use the tag
     <no_downloads/>
     to suppress the Downloads links -->

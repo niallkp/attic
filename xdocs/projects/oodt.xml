@@ -43,6 +43,7 @@
   <resource_table project="oodt">
     <mail name="commits,user"/>
     <jira key="OODT"/>
+    <cwiki/>
     <git/>
   </resource_table>
 

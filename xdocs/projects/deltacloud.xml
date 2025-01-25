@@ -35,6 +35,7 @@
     <mail name="commits"/>
     <mail name="user"/>
     <jira key="DTACLOUD"/>
+    <cwiki key="DTACLOUD"/>
     <git/>
   </resource_table>
 

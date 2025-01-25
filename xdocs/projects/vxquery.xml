@@ -43,6 +43,7 @@
   <resource_table project="vxquery">
   <mail name="commits"/>
   <jira/>
+  <cwiki/>
   <git/>
   </resource_table>
 

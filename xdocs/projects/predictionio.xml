@@ -49,6 +49,7 @@
     <mail name="commits,user"/>
     <!-- use attribute key="" to override default JIRA -->
     <jira key="PIO"/>
+    <cwiki key="PIO"/>
     <!-- use the tag
     <no_downloads/>
     to suppress the Downloads links -->
