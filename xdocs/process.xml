@@ -87,7 +87,8 @@
   (see also <a href="https://lists.apache.org/list.html?committers-cvs@apache.org">commits history</a>).
   </p>
   <p>This automatically removes VP entry on <a href="https://www.apache.org/foundation/leadership">https://www.apache.org/foundation/leadership</a> (<a href="https://github.com/apache/www-site/blob/main/content/foundation/leadership.ezmd">src</a>)
-     and project from <a href="https://www.apache.org/#projects-list">https://www.apache.org/#projects-list</a> navigation (<a href="https://github.com/apache/www-site/blob/main/content/index.ezmd#L304">src</a>)</p>.
+     and project from <a href="https://www.apache.org/#projects-list">https://www.apache.org/#projects-list</a> navigation (<a href="https://github.com/apache/www-site/blob/main/content/index.ezmd#L304">src</a>):
+     see <a href="https://github.com/apache/www-site">www-site</a> and its rendered HTML in <a href="https://github.com/apache/www-site/tree/asf-site">asf-site</a> branch.</p>.
 </section>
 
 <section id="informing">
