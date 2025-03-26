@@ -69,8 +69,9 @@ function output_filter(r)
             coroutine.yield(output)
         elseif host == 'twill'
         then
-            -- this avoids adding the headers to Javadocs, which stop working if the div is added
-            local output = bucket:gsub('</header>', div..'</header>', 1)
+            -- Fix for Javadocs: </header> does not appear in them, and
+            -- topNav only appears in the Javadoc pages that can take the div without failing
+            local output = bucket:gsub('</header>', div..'</header>', 1):gsub('<div class="topNav">', div..'<div class="topNav">', 1)
             coroutine.yield(output)
         elseif host == 'eagle'
         then
