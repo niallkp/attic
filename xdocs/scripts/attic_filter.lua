@@ -47,6 +47,14 @@ function output_filter(r)
         Attic page</a>.
       </div>]]):format(divstyle, astyle, host)
 
+    -- Javadoc uses frames, so link needs to open in new page
+    local divnew = ([[
+      <div style='%s'>
+        This project has retired. For details please refer to its
+        <a style='%s' href="https://attic.apache.org/projects/%s.html" target="_blank">
+        Attic page</a>.
+      </div>]]):format(divstyle, astyle, host)
+
     -- add header:
     -- special processing needed for some hosts
     if host == 'predictionio' or host == 'eagle' or host == 'metamodel' or host == 'mxnet' or host == 'twill'
@@ -71,7 +79,7 @@ function output_filter(r)
         then
             -- Fix for Javadocs: </header> does not appear in them, and
             -- topNav only appears in the Javadoc pages that can take the div without failing
-            local output = bucket:gsub('</header>', div..'</header>', 1):gsub('<div class="topNav">', div..'<div class="topNav">', 1)
+            local output = bucket:gsub('</header>', div..'</header>', 1):gsub('<div class="topNav">', divnew..'<div class="topNav">', 1)
             coroutine.yield(output)
         elseif host == 'eagle'
         then
