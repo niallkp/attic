@@ -87,7 +87,7 @@ function output_filter(r)
             coroutine.yield(output)
         elseif host == 'metamodel'
         then
-            local output = bucket:gsub('</nav>', div..'</nav>', 1)
+            local output = bucket:gsub('</nav>', div..'</nav>', 1):gsub('<div class="topNav">', divnew..'<div class="topNav">', 1)
             coroutine.yield(output)
         else
             coroutine.yield(bucket)
