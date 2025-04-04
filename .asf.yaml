@@ -1,0 +1,7 @@
+notifications:
+  commits: general@attic.apache.org
+  issues: general@attic.apache.org
+  pullrequests: general@attic.apache.org
+  jira_options: link label worklog
+  jobs: general@attic.apache.org
+  discussions: general@attic.apache.org
