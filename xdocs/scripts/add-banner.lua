@@ -1,3 +1,5 @@
+-- This file is probably obsolete; the TLP server now uses attic_filter.lua
+
 local posix = require 'posix'
 local TEMPL = [=[
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
