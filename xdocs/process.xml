@@ -134,11 +134,11 @@ ${Name} on behalf of ${project} + the Attic.
   <p>This should generate the following files for each ID, as well as updating <code>xdocs/stylesheets/project.xml</code>:</p>
   <ul>
     <li><code>ID.jira.tmp</code></li>
-    <li><code>xdocs/flagged/ID</code></li>
+    <li><code>xdocs/flagged/ID</code> (this is a directory, used to add the Attic banner)</li>
     <li><code>xdocs/projects/ID.xml</code></li>
-    <li><code>cwiki_retired/WIKI_ID.txt</code></li>
+    <li><code>cwiki_retired/WIKI_ID.txt</code> (this adds the CWIKI banner for projects)</li>
   </ul>
-  <p>N.B. The code does not (yet) allow for wiki aliases. For example, eagle used EAG as the wiki name.</p>
+  <p>The code allows for wiki aliases, as described in the cwiki_retired/AAREADME.txt file.</p>
   <p>Review the changes in <code>xdocs/</code>, then commit to svn.</p>
   <p>The <code>ID.jira.tmp</code> file is text that can be copy-pasted into a JIRA description. It should be deleted after use, and not committed to SVN.</p>
   <p>The <a href="https://ci2.apache.org/#/builders/16">buildbot job</a> will build the site and commit the result which will be published soon after.</p>
