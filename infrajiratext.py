@@ -79,7 +79,7 @@ def check_dist(pid):
 def check_ldap(pid):
     BASE='ou=project,ou=groups,dc=apache,dc=org'
     print("Remove the LDAP project group: dn: cn=%s,%s" % (pid, BASE))
-    
+
 def check_jira(pid):
     jira = loadjson(JIRA)
     for project in jira:
@@ -94,8 +94,8 @@ def check_jira(pid):
                 print("Make the JIRA project https://issues.apache.org/jira/projects/%s read-only and flag as retired" % key)
         elif catname.lower() == pid:
             print("Make the JIRA project https://issues.apache.org/jira/projects/%s read-only and flag as retired" % key)
-            
-# check for SVN and Git            
+
+# check for SVN and Git
 def check_scs(pid):
     svn = "https://svn.apache.org/repos/asf/%s" % pid
     if svnfiles(svn) > 0:
@@ -106,7 +106,7 @@ def check_scs(pid):
         for repo in gitbox[pid]['repositories']:
             print("- %s" % repo)
         print("Please do NOT rename the repos.")
-            
+
 if len(sys.argv) == 1:
     print("Please provide a list of project ids")
     sys.exit(1)
