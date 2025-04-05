@@ -195,6 +195,7 @@ for arg in sys.argv[1:]:
         continue
     create_jira_template(arg)
     os.mkdir(flagdir)
+    open(join(flagdir, "git.keep"), 'a').close()
     os.system("svn add %s" % flagdir)
     create_project(arg)
     update_stylesheet(arg)
