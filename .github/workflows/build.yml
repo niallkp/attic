@@ -42,6 +42,7 @@ jobs:
           path: docs
       - name: 🔧 Build site
         run: |
+          rm -rf docs/*
           ./build.sh
       - name: 🚀 Add commit to the asf-site
         if: ${{ github.event_name == 'push' }}
@@ -50,8 +51,8 @@ jobs:
           echo "Running git config"
           git config user.name "GitHub Actions"
           git config user.email "actions@users.noreply.github.com"
-          echo "Running git add"
-          git add .
+          echo "Running git add -A"
+          git add -A .
           echo "Running git commit"
           if git commit -m "Regenerated website based on ${GITHUB_SHA} commit"
           then
