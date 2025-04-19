@@ -67,7 +67,7 @@
      <li>site <a href="https://attic.apache.org">https://attic.apache.org</a>, with its source <a href="https://github.com/apache/attic">https://github.com/apache/attic</a>,
        <a href="https://github.com/apache/attic/actions">built</a> to <a href="https://github.com/apache/attic/tree/asf-site">asf-site</a></li>
      <li>jira <a href="https://issues.apache.org/jira/browse/ATTIC">https://issues.apache.org/jira/browse/ATTIC</a></li>
-     <li>legacy svn site <a href="https://svn.apache.org/repos/asf/attic">https://svn.apache.org/repos/asf/attic</a>: <code>cwiki_retired</code> is last content used for now</li>
+     <li>legacy svn site <a href="https://svn.apache.org/repos/asf/attic/site">https://svn.apache.org/repos/asf/attic/site</a> (<a href="https://github.com/apache/attic-site">https://github.com/apache/attic-site</a> mirror): <code>cwiki_retired</code> is last content used for now</li>
      <li>permissions on svn <a href="https://github.com/apache/infrastructure-p6/blob/production/modules/subversion_server/files/authorization/asf-authorization-template#L231">/repos/asf</a>
      and <a href="https://github.com/apache/infrastructure-p6/blob/production/modules/subversion_server/files/authorization/pit-authorization-template">/repos/infra</a></li>
      <li>websites <a href="https://github.com/apache/infrastructure-p6/blob/production/modules/svnwcsub/files/svnwcsub.conf">svnpubsub</a> and
