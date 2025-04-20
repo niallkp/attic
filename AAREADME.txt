@@ -1,6 +1,6 @@
 This directory contains marker files to indicate which Wikis relate to retired projects.
 
-The contents are checked out to a directory on the webserver that hosts project websites:
+The contents are copied to cwiki-retired branch, checked out to a directory on the webserver that hosts Confluence Wikis:
 https://github.com/apache/infrastructure-p6/blob/production/modules/cwiki_asf/manifests/init.pp
 
 It is invoked by the cwiki vhosts:
