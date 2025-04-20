@@ -30,22 +30,26 @@ jobs:
       - name: 🗂 Checkout
         uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9  # v3.5.3
         with:
-          submodules: recursive
-          lfs: true
           fetch-depth: 1
       - name: 🗂 Checkout asf-site branch with minimum depth
         uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9  # 3.5.3
-        if: ${{ github.event_name == 'push' }}
         with:
           ref: asf-site
           fetch-depth: 1
           path: asf-site
+      - name: 🗂 Checkout cwiki-retired branch with minimum depth
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9  # 3.5.3
+        with:
+          ref: cwiki-retired
+          fetch-depth: 1
+          path: cwiki-retired
       - name: 🔧 Build site
         run: |
           rm -rf asf-site/output/*
           ./build.sh -Ddocs.dest=asf-site/output
-      - name: 🚀 Add commit to the asf-site
-        if: ${{ github.event_name == 'push' }}
+          rm -rf cwiki-retired/*
+          cp cwiki_retired/* cwiki-retired
+      - name: 🚀 Add commit to the asf-site branch
         working-directory: asf-site
         run: |
           echo "Running git config"
@@ -58,3 +62,17 @@ jobs:
           then
             git push origin asf-site
           fi
+      - name: 🚀 Add commit to the cwiki-retired branch
+        working-directory: cwiki-retired
+        run: |
+          echo "Running git config"
+          git config user.name "GitHub Actions"
+          git config user.email "actions@users.noreply.github.com"
+          echo "Running git add -A"
+          git add -A .
+          echo "Running git commit"
+          if git commit -m "Regenerated cwiki-retired based on ${GITHUB_SHA} commit"
+          then
+            git push origin cwiki-retired
+          fi
+  
