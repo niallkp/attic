@@ -164,7 +164,7 @@ def create_project(pid):
         description = meta.get('description', 'TBA'))
     with open(outfile, 'w', encoding='utf-8') as o:
         o.write(out)
-    os.system("svn add %s" % outfile)
+    os.system("git add %s" % outfile)
     print("Check XML file for customisations such as JIRA and mailing lists")
 
 def find_wiki(pid):
@@ -182,7 +182,7 @@ def check_wiki(pid):
             if not flagname == pid:
                 w.write(pid)
                 w.write("\n")
-        os.system("svn add %s" % flagfile)
+        os.system("git add %s" % flagfile)
 
 for arg in sys.argv[1:]:
     print("Processing "+arg)
@@ -196,7 +196,7 @@ for arg in sys.argv[1:]:
     create_jira_template(arg)
     os.mkdir(flagdir)
     open(join(flagdir, "git.keep"), 'a').close()
-    os.system("svn add %s" % flagdir)
+    os.system("git add %s" % flagdir)
     create_project(arg)
     update_stylesheet(arg)
     check_wiki(arg)
