@@ -23,7 +23,7 @@ on:
   pull_request:
 
 jobs:
-  build:
+  website:
     runs-on: ubuntu-latest
 
     steps:
@@ -37,18 +37,10 @@ jobs:
           ref: asf-site
           fetch-depth: 1
           path: asf-site
-      - name: 🗂 Checkout cwiki-retired branch with minimum depth
-        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9  # 3.5.3
-        with:
-          ref: cwiki-retired
-          fetch-depth: 1
-          path: cwiki-retired
       - name: 🔧 Build site
         run: |
           rm -rf asf-site/output/*
           ./build.sh -Ddocs.dest=asf-site/output
-          rm -rf cwiki-retired/*
-          cp cwiki_retired/* cwiki-retired
       - name: 🚀 Add commit to the asf-site branch
         working-directory: asf-site
         run: |
@@ -62,6 +54,25 @@ jobs:
           then
             git push origin asf-site
           fi
+
+  cwiki:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🗂 Checkout
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9  # v3.5.3
+        with:
+          fetch-depth: 1
+      - name: 🗂 Checkout cwiki-retired branch with minimum depth
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9  # 3.5.3
+        with:
+          ref: cwiki-retired
+          fetch-depth: 1
+          path: cwiki-retired
+      - name: 🔧 Prepare cwiki-retired content
+        run: |
+          rm -rf cwiki-retired/*
+          cp cwiki_retired/* cwiki-retired
       - name: 🚀 Add commit to the cwiki-retired branch
         working-directory: cwiki-retired
         run: |
