@@ -97,7 +97,7 @@ in [YAML Format](https://en.wikipedia.org/wiki/YAML).
 Adding a project to the website is done by adding a YAML file for the project to the
 [_data/projects]({{site.repo}}/blob/main/_data/projects/) directory.
 This is currently a manual process, but we hope to automate it more in the future:
-  - clone the Git [Attic Repository]({{site.repo}}/blob/main/_data/projects/)
+  - clone the Git [Attic Repository]({{site.repo}})
   - Create the project YAML file (see the [Project Data]({% link data.md %}) page
     for help on crafting the YAML file)
   - Commit the file to your clone and open a PR request
