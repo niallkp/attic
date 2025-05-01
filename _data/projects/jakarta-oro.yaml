@@ -21,8 +21,8 @@ source_repositories:
 mailing_lists:
     - dev
     - user
-issue_tracker:
-    type: Bugzilla
-    keys:
+issue_trackers:
+    - type: Bugzilla
+      keys:
         - oro
 

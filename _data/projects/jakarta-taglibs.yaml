@@ -24,9 +24,9 @@ source_repositories:
       path: jakarta/taglibs
 mailing_lists:
     - dev
-issue_tracker:
-    type: Bugzilla
-    keys:
+issue_trackers:
+    - type: Bugzilla
+      keys:
         - taglibs
 wiki:
     type: CWIKI

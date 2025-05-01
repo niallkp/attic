@@ -17,10 +17,10 @@ mailing_lists:
     - commits
     - issues
     - user
-issue_tracker:
-    type: JIRA
-    keys:
-    - CLOWNFISH
-    - LUCY
+issue_trackers:
+    - type: JIRA
+      keys:
+      - CLOWNFISH
+      - LUCY
 wiki:
     type: CWIKI

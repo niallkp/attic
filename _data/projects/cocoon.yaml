@@ -17,9 +17,9 @@ mailing_lists:
     - cvs
     - docs
     - users-fr
-issue_tracker:
-    type: JIRA
-    keys:
+issue_trackers:
+    - type: JIRA
+      keys:
         - COCOON
         - COCOON3
 wiki:

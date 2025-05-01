@@ -14,8 +14,8 @@ mailing_lists:
     - dev
     - commits
     - user
-issue_tracker:
-    type: JIRA
+issue_trackers:
+    - type: JIRA
 wiki:
     type: CWIKI
 related_projects_text: >-

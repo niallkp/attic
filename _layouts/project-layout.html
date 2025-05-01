@@ -99,18 +99,28 @@ limitations under the License.
   {%- endfor %}
 {%- endif %}
 
-{%- if page.issue_tracker.type %}
+{%- for issue_tracker in page.issue_trackers %}
   <tr>
-    <td>Issue Tracker ({{ page.issue_tracker.type }})</td>
-    {%- case page.issue_tracker.type %}
+    <td>Issue Tracker ({{ issue_tracker.type }})</td>
+    {%- case issue_tracker.type %}
     {% when "JIRA" %}
       <td>
-      {%- for jira_key in page.issue_tracker.keys %}
+      {%- for jira_key in issue_tracker.keys %}
         {%- unless forloop.first %} | {% endunless %}
         <a href="https://issues.apache.org/jira/browse/{{ jira_key }}/">{{ jira_key }}</a>
       {%- else %}
         {%- assign jira_key = page.project_id | upcase %}
         <a href="https://issues.apache.org/jira/browse/{{ jira_key }}/">{{ jira_key }}</a>
+      {%- endfor %}
+      </td>
+    {% when "GitHub" %}
+      <td>
+      {%- for github_key in issue_tracker.keys %}
+        {%- unless forloop.first %} | {% endunless %}
+        <a href="https://github.com/apache/{{ github_key }}//issues?q=is%3Aissue">{{ github_key }}</a>
+      {%- else %}
+        {%- assign github_key = page.project_id %}
+        <a href="https://github.com/apache/{{ github_key }}/issues?q=is%3Aissue">{{ github_key }}</a>
       {%- endfor %}
       </td>
     {% when "Bugzilla" %}
@@ -125,10 +135,10 @@ limitations under the License.
       </td>
 
     {%- else %}
-    <td>??? {{ page.issue_tracker.type}} ???</td>
+    <td>??? {{ issue_tracker.type}} ???</td>
     {% endcase %}
   </tr>
-{%- endif %}
+{%- endfor %}
 
 {%- if page.wiki.type %}
   <tr>

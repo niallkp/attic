@@ -92,9 +92,9 @@ The project YAML files are used to generate the following:
 |source_repositories: path|Optional|path|Alternative respoitory path. Defaults to `${project_id}`|**Subversion(OJB)**: [YAML]({{site.repo}}/blob/main/_data/projects/ojb.yaml)/[Page]({% link projects/ojb.html %})|
 |mailing_lists|Optional|Array|List of the project's public mailing lists (e.g. dev, user etc)||
 |mailing_lists_prefix|Optional| |mbox_prefix if required (usually for Subprojects)|**Xang**: [YAML]({{site.repo}}/blob/main/_data/projects/xang.yaml)/[Page]({% link projects/xang.html %})|
-|issue_tracker|Optional|Map|Details of the project's Issue tracker(s)||
-|issue_tracker: type|Required|JIRA, Bugzilla|Type of Issue Tracker|**ORO (Bugzilla)**: [YAML]({{site.repo}}/blob/main/_data/projects/jakarta-oro.yaml)/[Page]({% link projects/jakarta-oro.html %})|
-|issue_tracker: keys|Optional|Array|List of Issue Tracker Key(s). Defaults to `${project_id}`|**Apex (JIRA)**: [YAML]({{site.repo}}/blob/main/_data/projects/apex.yaml)/[Page]({% link projects/apex.html %})|
+|issue_trackers|Optional|Array of Map|Details of the project's Issue tracker(s)|**ORO (Bugzilla)**: [YAML]({{site.repo}}/blob/main/_data/projects/jakarta-oro.yaml)/[Page]({% link projects/jakarta-oro.html %})|
+|issue_trackers: type|Required|JIRA, GitHub, Bugzilla|Type of Issue Tracker|**Aurora (GitHub,JIRA)**: [YAML]({{site.repo}}/blob/main/_data/projects/aurora.yaml)/[Page]({% link projects/aurora.html %})|
+|issue_trackers: keys|Optional|Array|List of Issue Tracker Key(s). Defaults to `${project_id}`|**Apex (JIRA)**: [YAML]({{site.repo}}/blob/main/_data/projects/apex.yaml)/[Page]({% link projects/apex.html %})|
 |wiki|Optional|Map|Details of the project's Issue tracker(s)||
 |wiki: type|Required|CWIKI|Type of Wiki. CWIKI causes the ***Attic Banner*** to be displayed on the CWIKI spaces||
 |wiki: keys|Optional|Array|List of Wiki Key(s). Defaults to `${project_id}`|**Eagle**: [YAML]({{site.repo}}/blob/main/_data/projects/eagle.yaml)/[Page]({% link projects/eagle.html %})|
@@ -127,8 +127,8 @@ mailing_lists:
     - dev
     - commits
     - user
-issue_tracker:
-    type: JIRA
+issue_trackers:
+    - type: JIRA
 wiki:
     type: CWIKI
 ```
@@ -153,8 +153,8 @@ mailing_lists:
     - dev
     - commits
     - user
-issue_tracker:
-    type: JIRA
+issue_trackers:
+    - type: JIRA
 wiki:
     type: CWIKI
 ```

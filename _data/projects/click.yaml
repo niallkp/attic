@@ -15,10 +15,10 @@ mailing_lists:
     - dev
     - commits
     - user
-issue_tracker:
-    type: JIRA
-    keys:
-    - CLK
-    - CLKE
+issue_trackers:
+    - type: JIRA
+      keys:
+        - CLK
+        - CLKE
 wiki:
     type: CWIKI

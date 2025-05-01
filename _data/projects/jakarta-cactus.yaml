@@ -19,8 +19,8 @@ source_repositories:
 mailing_lists:
     - dev
     - user
-issue_tracker:
-    type: JIRA
-    keys:
+issue_trackers:
+    - type: JIRA
+      keys:
       - CACTUS
 
