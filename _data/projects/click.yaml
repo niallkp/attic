@@ -17,5 +17,8 @@ mailing_lists:
     - user
 issue_tracker:
     type: JIRA
+    keys:
+    - CLK
+    - CLKE
 wiki:
     type: CWIKI

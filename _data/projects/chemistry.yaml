@@ -22,4 +22,4 @@ issue_tracker:
 wiki:
     type: CWIKI
     keys:
-      - cmis
+      - CMIS
