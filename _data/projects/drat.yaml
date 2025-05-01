@@ -15,5 +15,5 @@ source_repositories:
 mailing_lists:
     - dev
     - commits
-issue_tracker:
-    type: JIRA
+# issue_tracker:
+#     type: GitHub
