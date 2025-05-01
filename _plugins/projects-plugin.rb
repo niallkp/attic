@@ -26,8 +26,8 @@ module ProjectsPlugin
     safe true
 
     def generate(site)
-      site.data['project_array'].each do | project |
-        site.pages << ProjectPage.new(site, project['project_id'], project)
+      site.data['project_array'].each_with_index do | project, index |
+        site.pages << ProjectPage.new(site, index, project)
       end
     end
   end
@@ -37,16 +37,16 @@ module ProjectsPlugin
 #
 # Subclass of `Jekyll::Page` with custom method definitions.
   class ProjectPage < Jekyll::Page
-    def initialize(site, projectId, project)
+    def initialize(site, index, project)
 
       @site = site                  # the current site instance.
       @base = site.source           # path to the source directory.
       @dir  = 'projects'            # the directory the page will reside in.
 
       # Page name
-      @basename = projectId         # filename without the extension.
-      @ext      = '.html'           # the extension.
-      @name     = @basename + @ext  # filename
+      @basename = project['project_id'] # filename without the extension.
+      @ext      = '.html'               # the extension.
+      @name     = @basename + @ext      # filename
       
       # Look up front matter defaults scoped to type `categories`, if given key
       # doesn't exist in the `data` hash.
@@ -58,6 +58,7 @@ module ProjectsPlugin
       @data['layout'] ='project-layout'
       @data['title'] = project['project_name']
       @data['parent'] = 'Retired Projects'
+      @data['nav_order'] = index
       @data['has_toc'] = true
     end
   end

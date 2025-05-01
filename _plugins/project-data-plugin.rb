@@ -36,6 +36,7 @@ module ProjectDataPlugin
       site.data['projects'].each do | projectId, project|
         project['project_id'] = projectId
         project['project_name'] =  project.fetch("project_name", projectId.capitalize())
+        project['project_name_lower'] =  project["project_name"].downcase
         project['project_longname'] = project.fetch("project_longname", project['project_name'] )
         project['project_apachename'] = "Apache " + project["project_longname"]
         project['project_domain'] =  project.fetch("project_domain", projectId + ".apache.org")
@@ -60,7 +61,7 @@ module ProjectDataPlugin
         projects.push(project)
       end
 
-      site.data['project_array'] = projects
+      site.data['project_array'] = projects.sort_by { |project| project['project_name_lower'] }
       
     end
   end
