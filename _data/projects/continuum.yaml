@@ -19,7 +19,7 @@ mailing_lists:
     - commits
     - issues
     - notifications
-    - user
+    - users
 issue_tracker:
     type: JIRA
 wiki:

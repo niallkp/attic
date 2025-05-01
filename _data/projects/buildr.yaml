@@ -15,7 +15,7 @@ mailing_lists:
     - dev
     - ci
     - commits
-    - user
+    - users
 issue_tracker:
     type: JIRA
 wiki:
